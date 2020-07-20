@@ -1,0 +1,17 @@
+html, body{
+	height: 100%;
+}
+
+#capa{
+	background-color: green;
+	height: 100%;
+}
+
+/* Auxiliar */
+.borda{
+	border: 3px solid red;
+}
+
+.bg-dark{
+	color: #5a2866;
+}
