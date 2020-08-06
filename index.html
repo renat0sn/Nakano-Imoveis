@@ -6,21 +6,20 @@
 
 	<title>Nakano imóveis</title>
 
-	<!-- Link para css customizado -->
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-
 	<!-- Link para bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
-	
-</head>
-<body class="borda">
+	<!-- Link para css customizado -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-	<header> <!-- Início barra de navegação -->
-		<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-			<div class="container borda">
-				<a class="nav nav-brand" href="#"><h3>Nakano imóveis</h3></a> <!-- Logo principal -->
-				<button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+
+</head>
+<body>
+	<header id="navegacao-principal"> <!-- Início barra de navegação -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-roxo fixed-top">
+			<div class="container-navegacao">
+				<a class="nav nav-brand" href="#"><h1>Nakano imóveis</h1></a> <!-- Logo principal -->
+				<button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#nav-principal">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -44,19 +43,105 @@
 		</nav>
 	</header> <!-- Fim barra de navegação -->
 
-	<section id="capa">
-		<div class="container">
-			conteudo
+	<section id="capa" class="d-flex parallax"> <!--Início capa-->
+		<div class="container align-self-center">
+			<div class="text-center">
+				<h1 class="text-roxo">O MELHOR </h1>
+				<h1 class="text-roxo">DA ZONA SUL</h1>
+			</div>
 		</div>
-	</section>
+	</section> <!--Fim capa-->
 
-	<footer>
-		
-	</footer>
+	<section id="sobre"> <!--Início sobre-->
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<h2 class="text-roxo mb-4 text-md-left text-center">Nelson Nakano</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vel est dapibus rutrum. Donec placerat tellus vel nisi vestibulum, eu molestie ligula eleifend. Aliquam elementum nisi posuere libero eleifend tempor. Mauris porta non sapien id porttitor. Integer tempus neque ut ante efficitur, mollis varius est scelerisque. Nam blandit quam odio, vitae molestie nibh convallis fringilla. Fusce scelerisque porttitor elit ac varius. Morbi elit lorem, fringilla id tortor nec, mollis sodales est. Proin ultricies volutpat mi, sit amet tristique risus ullamcorper sit amet. Praesent ac efficitur mauris. Morbi sit amet ullamcorper risus, et interdum ante.</p>
+				</div>
+				<div class="col-md-6 text-center mt-4 mt-md-0">
+					<img src="https://source.unsplash.com/360x300">
+				</div>
+			</div>
+		</div>
+	</section> <!-- Fim sobre -->
+
+	<section id="carrossel"> <!--Início carrossel-->
+		<div class="container">
+			<div class="row">
+				<div class="mr-auto align-self-center">
+					<img src="icons/esquerda.svg" width="30">
+				</div>
+				<div class="carrossel-container">
+					<img src="https://source.unsplash.com/200x200">
+				</div>
+				<a class="ml-auto align-self-center">
+					<img src="icons/direita.svg" width="30">
+				</a>
+				
+			</div>
+			
+		</div>
+	</section> <!--Fim carrossel-->
+
+	<section id="depoimentos"> <!--Início depoimentos-->
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="container-fluid text-center">
+					<img src="https://img.icons8.com/wired/64/000000/quote.png" style="margin-bottom: 2em;">
+				</div>
+				
+				<div class="col-md-8 text-center mb-5">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vel est dapibus rutrum. Donec placerat tellus vel nisi vestibulum, eu molestie ligula eleifend. Aliquam elementum nisi posuere libero eleifend tempor.</p>
+					<h2 class="text-roxo">Cliente 1</h2>
+				</div>
+
+				<div class="col-md-8 text-center mb-5">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vel est dapibus rutrum. Donec placerat tellus vel nisi vestibulum, eu molestie ligula eleifend. Aliquam elementum nisi posuere libero eleifend tempor.</p>
+					<h2 class="text-roxo">Cliente 2</h2>
+				</div>
+
+				<div class="col-md-8 text-center">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vel est dapibus rutrum. Donec placerat tellus vel nisi vestibulum, eu molestie ligula eleifend. Aliquam elementum nisi posuere libero eleifend tempor.</p>
+					<h2 class="text-roxo">Cliente 3</h2>
+				</div>
+			</div>
+		</div>
+	</section> <!--Fim depoimentos-->
+
+	<footer id="contato"> <!--Início rodapé-->
+		<div class="container">
+			<div class="row">
+				<h2 class="container-fluid">Contato</h2>
+
+				<div class="col-sm-5">
+					<div class="input-group mb-4 mt-1">
+						<input type="text" class="form-control" placeholder="Nome...">
+					</div>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="E-mail...">
+					</div>
+				</div>
+				<div class="col-sm-7">
+					<form class="form-group">
+						<textarea class="form-control" placeholder="Digite sua mensagem aqui..." rows="4"></textarea>
+						<button type="submit" class="btn btn-default float-right mt-3">Enviar</button>
+					</form>
+				</div>
+			</div>
+			<div class="text-center text-white mt-4">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vel est dapibus rutrum.</p>
+			</div>
+		</div>
+	</footer> <!--Fim rodapé-->
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Javascript personalizado -->
+	<script src="js/script.js"></script>
 </body>
 </html>

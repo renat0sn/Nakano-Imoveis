@@ -1,17 +1,105 @@
 html, body{
-	height: 100%;
+
+}
+
+/* Seções importantes */
+#navegacao-principal a{
+	color: white;
+}
+
+#navegacao-principal a h1{
+	font-size: 26px;
+	font-weight: 100;
+	padding-bottom: 3px;
+	border-bottom: 1.3px solid white;
+	letter-spacing: 0.05em;
+}
+
+#navegacao-principal li a:hover{
+	color:#9bf0e1;
+}
+
+#navegacao-principal a:hover{
+	text-decoration: none;
 }
 
 #capa{
-	background-color: green;
-	height: 100%;
+	height: 100vh;
+	background: url("../img/casa.jpg") no-repeat;
+	background-size: 100% 140%;
+}
+
+#capa h1{
+	font-size: 56px;
+	font-weight: 330;
+	letter-spacing: 0.04em;
+	margin: 0.4em 0;
+}
+
+h2{
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+}
+
+#sobre{
+	margin: 5em auto;
+}
+
+#sobre p{
+	text-align: justify;
+}
+
+#carrossel{
+	background-color: #5a2866;
+}
+
+#depoimentos{
+	margin: 4em 0;
+}
+
+#contato{
+	padding: 4em 0 3em 0;
+	background-color: gray;
+}
+
+#contato h2{
+	font-size: 36px;
+	font-weight: 200;
+	letter-spacing: 0.04em;
+	color: #ebebeb;
+	margin-bottom: 0.8em;
+}
+
+.container-navegacao{
+	width: 100%;
+	margin: 0 4em;
+	display: inline-flex;
+}
+
+.carrossel-container{
+	margin: 4em 0;
+}
+
+.btn-default{
+	background-color: #5a2866;
+	font-size: 16px;
+	font-weight: 200;
+	letter-spacing: 0.06em;
+	color: white;
+	margin-bottom: 0.8em;
+	padding: 0.5em 1.2em;
+}
+
+.bg-roxo{
+	background-color: rgba(90,40,102,0.85);
+}
+
+.text-roxo{
+	color: #5a2866;
 }
 
 /* Auxiliar */
 .borda{
 	border: 3px solid red;
-}
-
-.bg-dark{
-	color: #5a2866;
 }
