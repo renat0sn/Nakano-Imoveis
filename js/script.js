@@ -51,11 +51,29 @@ $(document).ready(() => {
 
 		elementosAnimacao.each(function() {
 			if(estaNaTela(this)){
-				//$(this).addClass('iniciar-animacao')
-				$(this).animate({
-					'left': '0',
-					'opacity': '1'
-				}, 1400, function(){visivel = true})
+				if(!$(this).hasClass('iniciar-animacao')){
+					$(this).addClass('iniciar-animacao')
+					$(this).animate({
+						'left': '0',
+						'opacity': '1'
+					}, 1400)
+				}
+			}
+			else{
+				if($(this).hasClass('iniciar-animacao')){
+					let left = '50vw'
+
+					if($(this).hasClass('animar-para-direita')){
+						left = '-50vw'
+					}
+
+					$(this).animate({
+						'opacity': '0',
+						'left': left
+					}, 1000)
+
+					$(this).removeClass('iniciar-animacao')
+				}
 			}
 		})	
 	})
