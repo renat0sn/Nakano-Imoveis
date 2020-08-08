@@ -1,5 +1,5 @@
 html, body{
-
+	overflow-x: hidden;
 }
 
 /* Seções importantes */
@@ -10,9 +10,15 @@ html, body{
 #navegacao-principal a h1{
 	font-size: 26px;
 	font-weight: 100;
-	padding-bottom: 3px;
 	border-bottom: 1.3px solid white;
 	letter-spacing: 0.05em;
+}
+
+#navegacao-principal li a{
+	font-size: 18px;
+	font-weight: 350;
+	letter-spacing: 0.05em;
+	margin-right: 0.5em;
 }
 
 #navegacao-principal li a:hover{
@@ -43,7 +49,7 @@ h2{
 }
 
 #sobre{
-	margin: 5em auto;
+	padding: 5em 0;
 }
 
 #sobre p{
@@ -55,11 +61,11 @@ h2{
 }
 
 #depoimentos{
-	margin: 4em 0;
+	padding: 5em 0;
 }
 
 #contato{
-	padding: 4em 0 3em 0;
+	padding: 5em 0 3em 0;
 	background-color: gray;
 }
 
@@ -99,7 +105,67 @@ h2{
 	color: #5a2866;
 }
 
+.borda-navegacao{
+	border: 1px solid #5a2866;
+}
+
+.desabilitarSelecao {
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
+    /* cursor: default; */
+}
+
+/* Animações */
+
+@keyframes slide-in {
+	from{
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes slide-out {
+	from{
+	}
+	to {
+		left: 50vw;
+		opacity: 0;
+	}
+}
+
+.animar-para-esquerda{
+	left: 50vw;
+}
+
+.animar-para-direita{
+	left: -50vw;
+}
+
+.iniciar-animacao{
+	animation-name: slide-in;
+	animation-duration: 1400ms;
+	animation-fill-mode: forwards;
+}
+
+.terminar-animacao{
+	animation-name: slide-out;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+.animar{
+	position: relative;
+	opacity: 0;
+}
+
 /* Auxiliar */
+
 .borda{
-	border: 3px solid red;
+	border: 2px solid red;
 }
