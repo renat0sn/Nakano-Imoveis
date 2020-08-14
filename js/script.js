@@ -2,38 +2,39 @@ $(document).ready(() => {
 
 
 	// INÍCIO PARALLAX 
-	let sensibilidadeParallax = 1; //Valores de 0 a 1!!
 	
-	var parallax = () => {let coef = sensibilidadeParallax*70
-			let offset = $(window).scrollTop()
-			let tamanhoImg = parseFloat($('#capa').css('height'))
+	var parallaxCapa = (getJanelaY) => {
+		getJanelaY -= window.innerHeight
+		const getTamanhoElem = $('#capa').height()
+		let offset = (getJanelaY/getTamanhoElem) * 100
 
-			let x = (offset/tamanhoImg)*coef + 30
-			let offsetAtual = parseFloat($('#capa').css('background-position-y'))
+		$('#capa').css('background-position-y', offset + '%')
+	}
 
-			$('#capa').css('background-position', '0 ' + x + '%')
-		}
-	parallax()
-	$(document).scroll(() => {
-		parallax()
-	})
+	var parallaxCarrossel = (getJanelaY) => {
+		const getElementoY = $('.carousel-inner').offset().top
+		const getTamanhoElem = $('.carousel-inner').height();
+		let offset = (getJanelaY-getElementoY)*100/(getTamanhoElem+window.innerHeight)
+
+		$('.item-carrossel').css('background-position-y', offset + '%')
+		//console.log(getJanelaY)
+	}
+	
 	// FIM PARALLAX
 	
 
 	// INÍCIO ROLAGEM
 
-	$('a').on('click', function(e) {
+	$('#navegacao-principal a').on('click', function(e) {
 		e.preventDefault()
 		
 		let elem = $(this).attr('href')
-		let navegacaoHeight = $('#navegacao-principal').height()
-		let parada = $(elem).offset().top - navegacaoHeight
+		let parada = $(elem).offset().top + $(elem).height() - window.innerHeight
 
 		$('body, html').animate({
 			'scrollTop': parada + 'px'
 		}, 1000)
-		console.log(navegacaoHeight)
-		
+		console.log($(elem))
 	})
 
 
@@ -43,11 +44,14 @@ $(document).ready(() => {
 	// INÍCIO ANIMAÇÕES
 
 	let elementosAnimacao = $('.animar')
-	console.log(elementosAnimacao)
+
 	$(window).on('scroll', () => {
 		const getJanelaY = window.scrollY + window.innerHeight
-		const getElementoY = (elem) => $(elem).offset().top + 100
+		const getElementoY = (elem) => $(elem).offset().top + 10
 		const estaNaTela = (elem) => getJanelaY > getElementoY(elem)
+
+		parallaxCapa(getJanelaY)
+		parallaxCarrossel(getJanelaY)
 
 		elementosAnimacao.each(function() {
 			if(estaNaTela(this)){
@@ -56,21 +60,21 @@ $(document).ready(() => {
 					$(this).animate({
 						'left': '0',
 						'opacity': '1'
-					}, 1400)
+					}, 800)
 				}
 			}
 			else{
 				if($(this).hasClass('iniciar-animacao')){
-					let left = '50vw'
+					let left = '5vw'
 
 					if($(this).hasClass('animar-para-direita')){
-						left = '-50vw'
+						left = '-5vw'
 					}
 
 					$(this).animate({
 						'opacity': '0',
 						'left': left
-					}, 1000)
+					}, 800)
 
 					$(this).removeClass('iniciar-animacao')
 				}

@@ -2,89 +2,158 @@ html, body{
 	overflow-x: hidden;
 }
 
-/* Seções importantes */
-#navegacao-principal a{
-	color: white;
+h1, h2, h3, h4, h5, p{
+	font-family: ubuntu light
 }
 
-#navegacao-principal a h1{
-	font-size: 26px;
-	font-weight: 100;
-	border-bottom: 1.3px solid white;
-	letter-spacing: 0.05em;
+
+/* Seções importantes */
+
+#navegacao-principal{
+	background-color: rgba(90,40,102,0.85);
+	min-height: 65px;
 }
 
 #navegacao-principal li a{
+	font-family: ubuntu regular;
+	height: 100%;
 	font-size: 18px;
-	font-weight: 350;
-	letter-spacing: 0.05em;
-	margin-right: 0.5em;
+	letter-spacing: 0.06em;
+	padding: 0.5em 1.2em;
+	color: white;
 }
 
 #navegacao-principal li a:hover{
-	color:#9bf0e1;
+	color: #5a2866;
+	background-color: white;
+	transition: color 0.5s, background-color 0.5s;
 }
 
-#navegacao-principal a:hover{
-	text-decoration: none;
+.navbar{
+	padding: 0;
+	margin: 0;
+}
+
+#logo{
+	height: 65px;
+	margin: 5px 0;
+	position: relative;
+	bottom: 6px;
 }
 
 #capa{
 	height: 100vh;
-	background: url("../img/casa.jpg") no-repeat;
-	background-size: 100% 140%;
+	background: url("../img/casa.png") no-repeat;
 }
 
 #capa h1{
+	font-family: ubuntu light;
 	font-size: 56px;
-	font-weight: 330;
-	letter-spacing: 0.04em;
+	font-weight: 130;
+	letter-spacing: 0.07em;
 	margin: 0.4em 0;
 }
 
 h2{
+	font-family: ubuntu light;
 	font-size: 36px;
-	font-weight: 400;
-	letter-spacing: 0.04em;
 }
 
 #sobre{
-	padding: 5em 0;
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	margin-top: 3em;
 }
 
 #sobre p{
 	text-align: justify;
+	font-family: ubuntu regular;
+	font-size: 16px;
+	color: gray;
+}
+
+.titulo-sobre{
+	padding: 2em 0;
+}
+
+.texto-sobre{
+	padding: 3em 0;
+}
+
+#marca-dagua{
+	width: 0;
+	z-index: -1;
+	align-self: flex-end;
+}
+
+.subtext{
+	font-size: 21px;
+	color: gray;
+	float: right;
+	margin-right: 5em;
 }
 
 #carrossel{
-	background-color: #5a2866;
+	height: 50vh;
+}
+
+.item-carrossel{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-family: ubuntu regular;
+	color: white;
+}
+
+.item-carrossel-1{
+	background-image: url(../img/casa1.png);
+	background-repeat: no-repeat;
+	background-position:top;
+}
+
+.item-carrossel-2{
+	background-image: url(../img/casa2.png);
+	background-repeat: no-repeat;
+	background-position:top;
+}
+
+.item-carrossel-3{
+	background-image: url(../img/casa3.png);
+	background-repeat: no-repeat;
+	background-position:top;
 }
 
 #depoimentos{
-	padding: 5em 0;
+	height: 100vh;
+}
+
+#depoimentos p{
+	font-size: 14px;
+	color: gray;
+}
+#depoimentos h3{
+	font-size: 1.4em;
+	letter-spacing: 0.05em;
+	font-weight: 600;
 }
 
 #contato{
-	padding: 5em 0 3em 0;
 	background-color: gray;
 }
 
 #contato h2{
-	font-size: 36px;
-	font-weight: 200;
+	font-size: 28px;
+	font-weight: 550;
 	letter-spacing: 0.04em;
 	color: #ebebeb;
-	margin-bottom: 0.8em;
+	margin: 0.8em 0;
 }
 
 .container-navegacao{
 	width: 100%;
+	height: 100%;
 	margin: 0 4em;
-	display: inline-flex;
-}
-
-.carrossel-container{
-	margin: 4em 0;
 }
 
 .btn-default{
@@ -97,10 +166,9 @@ h2{
 	padding: 0.5em 1.2em;
 }
 
-.bg-roxo{
-	background-color: rgba(90,40,102,0.85);
+.oba{
+	padding-bottom: 100%;
 }
-
 .text-roxo{
 	color: #5a2866;
 }
@@ -108,6 +176,15 @@ h2{
 .borda-navegacao{
 	border: 1px solid #5a2866;
 }
+
+.preencher-altura{
+	height: 100%;
+}
+
+.centralizar{
+	align-self: center;
+}
+
 
 .desabilitarSelecao {
     -webkit-touch-callout: none;  /* iPhone OS, Safari */
@@ -121,48 +198,116 @@ h2{
 
 /* Animações */
 
-@keyframes slide-in {
-	from{
-	}
-	to {
-		left: 0;
-		opacity: 1;
-	}
-}
-
-@keyframes slide-out {
-	from{
-	}
-	to {
-		left: 50vw;
-		opacity: 0;
-	}
-}
-
 .animar-para-esquerda{
-	left: 50vw;
+	left: 5vw;
 }
 
 .animar-para-direita{
-	left: -50vw;
+	left: -5vw;
 }
 
 .iniciar-animacao{
-	animation-name: slide-in;
-	animation-duration: 1400ms;
-	animation-fill-mode: forwards;
-}
-
-.terminar-animacao{
-	animation-name: slide-out;
-	animation-duration: 500ms;
-	animation-fill-mode: forwards;
 }
 
 .animar{
 	position: relative;
 	opacity: 0;
 }
+
+/* Fonte */
+ 
+@font-face {
+    font-family: 'ubuntu light';
+    src: url('../fonts/Ubuntu-Light.ttf') /*Para os demais navegadores*/;
+}
+
+@font-face {
+    font-family: 'ubuntu regular';
+    src: url('../fonts/Ubuntu-Regular.ttf') /*Para os demais navegadores*/;
+}
+
+@font-face {
+    font-family: 'ubuntu medium';
+    src: url('../fonts/Ubuntu-Medium.ttf') /*Para os demais navegadores*/;
+}
+
+@font-face {
+    font-family: 'ubuntu bold';
+    src: url('../fonts/Ubuntu-Bold.ttf') /*Para os demais navegadores*/;
+}
+
+.ubuntu-bold{
+	font-family: ubuntu bold;
+}
+
+.ubuntu-medium{
+	font-family: ubuntu medium;
+}
+
+.ubuntu-regular{
+	font-family: ubuntu regular;
+}
+
+
+/* Responsividade */
+@media only screen and (min-width: 576px) { ... }
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+@media only screen and (min-width: 768px) { 
+
+	.divisor-sobre {
+		border-right: 3px solid #5a2866;
+		padding: 1em 0;
+	}
+	.titulo-sobre{
+		float: right;
+		padding-right: 5em;
+	}
+	#sobre h2{
+		font-size: 2.4em;
+	}
+	.texto-sobre{
+		padding-left: 5em;
+	}
+	.subtext{
+		margin-right: 0;
+	}
+	#depoimentos p{
+		font-size: 1em;
+	}
+	#depoimentos img{
+		width: 122px;
+	}
+}
+
+/* Dispositivos large (desktops com 992px ou mais) */
+@media only screen and (min-width: 992px) { 
+
+	h2{
+		font-size: 2.6em;
+	}
+	#sobre p{
+		font-size: 1.1em;
+	}
+	#contato h2{
+		font-size: 32px;
+	}
+}
+
+/* Dispositivos extra large (desktops grandes com 1200px ou mais) */
+@media only screen and (min-width: 1200px) {
+
+	h2{
+		font-size: 2.8em;
+	}
+	#sobre p{
+		font-size: 1.2em;
+	}
+	#depoimentos p{
+		font-size: 1.1em;
+	}
+}
+
 
 /* Auxiliar */
 
